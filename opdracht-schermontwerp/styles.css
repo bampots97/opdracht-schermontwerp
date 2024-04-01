@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --paars: #5722CD;
+    --blauw: #4845E4;
+    --roze: #ED4385;
+    --zwart: #0C0C0C;
+    --lichtpaars: #F2F0FF;
+    --lichtgrijs: #F3F6F9;
+    --grijs: #7A7A7A;
+}
+
+ul {
+    list-style: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: inherit;
+}
+
+button {
+    overflow: hidden;
+    background-color: inherit;
+    font-size: inherit;
+    color: var(--paars);
+    font-weight: bold;
+    border: none;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: roboto;
+    color: var(--zwart);
+}
+
+h1, h2, h3 {
+    font-family: "Merriweather", Serif;
+}
+
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: 2em 0 2em 0;
+}
+
+.inner-container {
+    flex-basis: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 02px solid red;*/
+    margin: 0 20px;
+}
+
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+.header-section {
+    color: var(--lichtgrijs);
+    line-height: 4em;
+    background: var(--blauw);
+    background: linear-gradient(90deg, var(--blauw) 70%, var(--paars));
+    margin: 0
+
+
+}
+
+.header-button {
+    background-color: var(--roze);
+    padding: 1.4em;
+    border-radius: 2em;
+    border: hidden;
+    color: var(--lichtgrijs);
+    margin-bottom: 4em;
+    text-transform: uppercase;
+}
+
+.header-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 2em 0 1em 0;
+
+
+}
+
+.header-navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-basis: 400px;
+    margin: 0 0 3em 0;
+
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    line-height: 3em;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.link-to-form {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* --------------- 4.2 Introduction ------------------- */
+.intro-section {
+    background-color: var(--lichtgrijs);
+    margin: 3em 1em 3em 1em;
+
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 6em 0 6em 0;
+
+}
+
+.intro-content h2 {
+    color: var(--blauw);
+    line-height: 1.5em;
+
+    width: 700px;
+    text-align: center;
+    margin-bottom: 3em;
+    font-size: 24px;
+
+}
+
+.intro-button {
+    color: var(--paars);
+    border: none;
+    margin: 0 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro-para {
+    margin: 4em 0 4em;
+}
+
+/* --------------- 4.3 rolling stone section ------------------- */
+.rolling-stone-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: var(--lichtgrijs);
+    margin: 3em 1em 3em 1em;
+
+
+}
+
+.rolling-stone-text {
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: center;
+    flex-basis: 1000px;
+
+
+}
+
+.rolling-stone-img {
+    box-shadow: 0 20px 3px 5px rgba(2, 2, 2, 0.21);
+    flex-basis: 600px;
+
+
+}
+
+/* --------------- 4.4 variety ------------------- */
+.variety-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    background-color: var(--lichtgrijs);
+    margin: 3em 1em 3em 1em;
+
+
+}
+
+.variety-text {
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: center;
+    margin-left: 18em;
+
+
+}
+
+{
+
+}
+.variety-img {
+    box-shadow: 0 20px 3px 5px rgba(0, 0, 0, 0.21);
+    flex-basis: 900px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+}
+
+/*---------------------------------------------4.5 worth -----------------------------------*/
+.worth-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    background-color: var(--lichtgrijs);
+    margin: 3em 1em 3em 1em;
+}
+
+.worth-text {
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: center;
+}
+
+
+.worth-img {
+    box-shadow: 0 20px 3px 5px rgba(0, 0, 0, 0.21);
+    flex-basis: 900px;
+
+}
+
+/*------------------------4.6 usp-section-------------------*/
+.usp-section {
+    background-color: inherit;
+}
+
+.usp-article {
+    border: 2px solid var(--paars);
+    text-align: start;
+    flex-basis: 350px;
+    /*margin: 2em 2em 2em 2em;*/
+    padding: 20px 30px;
+
+
+}
+
+.usp-article img {
+    max-width: 80px;
+    margin: 1em 1em;
+
+
+}
+
+.usp-article h3 {
+
+    color: var(--paars);
+    margin-bottom: 1.25em;
+    font-weight: bold;
+    font-size: 20px;
+
+
+}
+
+.inner-container__usp-container {
+    flex-basis: 1150px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    text-align: center;
+    padding: 100px 0;
+
+}
+
+/*--------------------------------------4.7 form --------------------------------*/
+
+.inner-container__fill-container {
+    background: var(--blauw);
+    background: linear-gradient(90deg, var(--blauw) 70%, var(--paars));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2em 0 0em 0;
+
+}
+
+#question-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 17px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--lichtgrijs);
+    margin: 3em;
+
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+
+}
+
+.form-field #name {
+    width: 700px;
+    height: 50px;
+    border: 5px hidden;
+    border-radius: 3px;
+    padding: 20px;
+    font-size: 14px;
+
+}
+
+.form-field #mail {
+    width: 700px;
+    height: 50px;
+    border: 5px hidden;
+    border-radius: 3px;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.form-field #msg {
+    width: 700px;
+    height: 200px;
+    border: 5px hidden;
+    border-radius: 3px;
+    padding: 20px;
+    font-size: 14px;
+}
+
+
+#question-form h2 {
+    font-size: 48px;
+    margin-bottom: 0.40em;
+}
+
+.form-button {
+    background-color: var(--roze);
+    padding: 1em 3em;
+    border-radius: 6em;
+    border: hidden;
+    color: var(--lichtgrijs);
+    margin: 2em 0 2em 0;
+    text-transform: uppercase;
+}
+
+.outer-container__footer {
+    background-color: #0C0C0C;
+    color: var(--lichtgrijs);
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-text {
+    font-size: 14px;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .header-navigation {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 2em 0 1em 0;
+    }
+
+
+    .rolling-stone-section {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        background-color: var(--lichtgrijs);
+        margin: 3em 1em 3em 1em;
+    }
+
+    .rolling-stone-text {
+        font-size: large;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+        flex-basis: 300px;
+    }
+
+    .variety-section {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        background-color: var(--lichtgrijs);
+        margin: 3em 1em 3em 1em;
+    }
+
+    .variety-text {
+        font-size: large;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+        flex-basis: 300px;
+    }
+
+
+    .worth-section {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        background-color: var(--lichtgrijs);
+        margin: 3em 1em 3em 1em;
+    }
+
+    .worth-text {
+        font-size: large;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+        flex-basis: 300px;
+    }
+    .rolling-stone-img {
+        width: 100%;
+        flex-basis: 100px;
+       box-shadow: 10px 13px 15px rgba(2, 2, 2, 0.21);
+    }
+    .variety-img {
+        width: 100%;
+        flex-basis: 100px;
+        box-shadow: 10px 13px 15px rgba(2, 2, 2, 0.21);
+    }
+
+    .worth-img{
+        width: 100%;
+        flex-basis: 100px;
+        box-shadow: 10px 13px 15px rgba(2, 2, 2, 0.21);
+    }
+
+    .inner-container__usp-container {
+        flex-basis: 600px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        text-align: center;
+        /* padding: 100px 0; *//
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
